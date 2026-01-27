@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Typing Master</title>
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <script src="/src/js/script.js" defer></script>
+  </head>
+  <body class="bg-black px-8">
+    <div class="max-w-7xl m-auto font-sora text-neutral-500">
+      <header class="py-8 flex flex-row justify-between items-center">
+        <div><img src="/assets/images/logo-large.svg" alt="Logo" /></div>
+        <div class="flex flex-row items-center">
+          <img
+            class="mr-1"
+            src="/assets/images/icon-personal-best.svg"
+            alt=""
+          />
+          <span class="text-neutral-500">Personal best :</span
+          ><span class="text-neutral-300"> 92 WPM</span>
+        </div>
+      </header>
+      <main
+        class="mt-12 flex justify-between py-1 border-b-gray-700 border-b-2"
+      >
+        <div class="flex items-center">
+          <p class="border-r-2 pr-4">
+            WPM :<span class="text-neutral-300 font-bold"> 40</span>
+          </p>
+          <p class="border-r-2 px-4">
+            Accuracy : <span class="text-red-500 font-bold"> 94%</span>
+          </p>
+          <p class="border-r-2 px-4">
+            Time : <span class="text-yellow-500 font-bold"> 0:46</span>
+          </p>
+        </div>
+        <div class="flex">
+          <div class="px-4 border-r-2">
+            <span>Difficulty:</span>
+            <button
+              id="easy"
+              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer"
+            >
+              Easy
+            </button>
+            <button
+              id="medium"
+              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer"
+            >
+              Medium
+            </button>
+            <button
+              id="hard"
+              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer"
+            >
+              Hard
+            </button>
+          </div>
+          <div class="pl-4">
+            <span>Mode:</span>
+            <button class="border-2 px-2 py-0.5 rounded-[6px]">
+              Timed(60s)
+            </button>
+            <button class="border-2 px-2 py-0.5 rounded-[6px]">Passage</button>
+          </div>
+        </div>
+      </main>
+      <div class="relative border-b-2">
+        <div id="textarea" class="mt-8 text-4xl text-neutral-300"></div>
+        <input
+          type="text"
+          id="quote-input"
+          class="absolute opacity-0 w-full h-full top-0 left-0 cursor-default"
+        />
+      </div>
+      <button
+        class="bg-neutral-700 text-neutral-300 text-xl px-2 py-0.5 rounded-md flex gap-2 m-auto mt-4"
+      >
+        Restart Text <img src="/assets/images/icon-restart.svg" alt="" />
+      </button>
+    </div>
+  </body>
+</html>
