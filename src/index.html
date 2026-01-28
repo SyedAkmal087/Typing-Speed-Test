@@ -13,10 +13,17 @@
     <link rel="stylesheet" href="/src/css/output.css" />
     <script src="/src/js/script.js" defer></script>
   </head>
-  <body class="bg-black px-8">
+  <body class="bg-black px-2 sm:px-8">
     <div class="max-w-7xl m-auto font-sora text-neutral-500">
-      <header class="py-8 flex flex-row justify-between items-center">
-        <div><img src="/assets/images/logo-large.svg" alt="Logo" /></div>
+      <header class="py-4 sm:py-8 flex flex-row justify-between items-center">
+        <div>
+          <img
+            src="/assets/images/logo-large.svg"
+            alt="Logo"
+            class="hidden sm:block"
+          />
+          <img src="/assets/images/logo-small.svg" alt="" class="sm:hidden" />
+        </div>
         <div class="flex flex-row items-center">
           <img
             class="mr-1"
@@ -24,45 +31,45 @@
             alt=""
           />
           <span class="text-neutral-500">Personal best :</span
-          ><span class="text-neutral-300"> 92 WPM</span>
+          ><span id="wordperminute" class="text-neutral-300">00WPM</span>
         </div>
       </header>
       <main
         class="mt-12 flex md:justify-between items-center md:gap-0 gap-4 py-1 border-b-gray-700 border-b-2 flex-col md:flex-row"
       >
         <div class="flex items-center">
-          <p class="border-r-2 pr-4">
+          <p class="border-r-2 pr-4 text-xs sm:text-inherit">
             WPM :<span id="wordperminute" class="text-neutral-300 font-bold">
               00</span
             >
           </p>
-          <p class="border-r-2 px-4">
+          <p class="border-r-2 px-4 text-xs sm:text-inherit">
             Accuracy :
             <span id="accuracy" class="text-red-500 font-bold"> 0%</span>
           </p>
-          <p class="border-r-2 px-4">
+          <p class="border-r-2 px-4 text-xs sm:text-inherit">
             Time :
             <span id="time" class="text-yellow-500 font-bold"> 0:00</span>
           </p>
         </div>
         <div class="flex">
           <div class="px-4">
-            <span>Difficulty:</span>
+            <span class="text-xs sm:text-inherit">Difficulty:</span>
             <button
               id="easy"
-              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer"
+              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer text-xs sm:text-inherit"
             >
               Easy
             </button>
             <button
               id="medium"
-              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer"
+              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer text-xs sm:text-inherit"
             >
               Medium
             </button>
             <button
               id="hard"
-              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer"
+              class="border-2 px-2 py-0.5 rounded-[6px] cursor-pointer text-xs sm:text-inherit"
             >
               Hard
             </button>
@@ -70,7 +77,10 @@
         </div>
       </main>
       <div class="relative border-b-2">
-        <div id="textarea" class="mt-8 text-4xl text-neutral-300"></div>
+        <div
+          id="textarea"
+          class="mt-8 text-2xl md:text-3xl text-neutral-300"
+        ></div>
         <input
           type="text"
           id="quote-input"
